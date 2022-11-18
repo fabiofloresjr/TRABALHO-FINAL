@@ -48,12 +48,31 @@
             android:text="Qual o modelo do seu carro?" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/editTextModelo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Modelo:"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewTipoVeiculo"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Qual o tipo do seu carro?" />
+
+        <EditText
+            android:id="@+id/editTextTipoVeiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Carro:"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textViewListagemCarros1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
