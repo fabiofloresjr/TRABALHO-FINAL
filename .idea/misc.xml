@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_banco_de_dados.xml" value="0.25769927536231885" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_comprador.xml" value="0.25" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_comprador_vendedor.xml" value="0.1641337386018237" />
         <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_locatario_locador.xml" value="0.25769927536231885" />
         <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/fatec.senai/AndroidStudioProjects/TrabalhoFinal/app/src/main/res/layout/activity_vendedor.xml" value="0.1641337386018237" />
       </map>
     </option>
   </component>

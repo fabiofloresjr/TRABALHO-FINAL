@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LocatarioLocadorActivity">
+    tools:context=".CompradorActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,19 +13,9 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-        <Button
-            android:id="@+id/buttonLocatario"
+        <TextView
+            android:id="@+id/textViewListagemCarros"
             android:layout_width="match_parent"
-            android:layout_height="359dp"
-            android:onClick="locatario"
-            android:text="Locatario" />
-
-        <Button
-            android:id="@+id/buttonLocador"
-            android:layout_width="match_parent"
-            android:layout_height="359dp"
-            android:onClick="locador"
-            android:text="Locador" />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

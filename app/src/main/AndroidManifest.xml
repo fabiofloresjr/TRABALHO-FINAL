@@ -14,16 +14,13 @@
         android:theme="@style/Theme.TrabalhoFinal"
         tools:targetApi="31">
         <activity
-            android:name=".LocadorActivity"
+            android:name=".VendedorActivity"
             android:exported="false" />
         <activity
-            android:name=".LocatarioActivity"
-            android:exported="false" />
+            android:name=".CompradorActivity"
+            android:exported="true" />
         <activity
-            android:name=".LocatarioLocadorActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BancoDeDadosActivity"
+            android:name=".CompradorVendedorActivity"
             android:exported="false" />
         <activity
             android:name=".CarrosActivity"

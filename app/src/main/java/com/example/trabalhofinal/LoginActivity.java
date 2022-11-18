@@ -11,10 +11,13 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+    BancoDeDadosActivity bancoDeDadosActivity = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        bancoDeDadosActivity = new BancoDeDadosActivity(this);
     }
 
     public void login(View view) {
@@ -27,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
         if (switchState) {
-            Intent intent = new Intent(this, LocatarioLocadorActivity.class);
+            Intent intent = new Intent(this, CompradorVendedorActivity.class);
             startActivity(intent);
         }else {
             Toast.makeText(this,"ERROR, Não tem idade suficiente.",Toast.LENGTH_LONG).show();
