@@ -43,9 +43,9 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
                 "(null, 'VW', 113.880, 'Virtus', 'Sedan')," +
                 "(null, 'Honda', 184.500, 'HR-V', 'SUV')," +
                 "(null, 'GM', 106.560, 'Spin', 'Minivan')," +
-                "(null, 'FIAT', 106.690, 'Fiorino', 'Furgão_pequeno')," +
-                "(null, 'Toyota', 290.690, 'Hilux', 'Caminhonete_media')," +
-                "(null, 'FIAT', 127.890, 'Strada', 'Caminhonete_pequena')";
+                "(null, 'FIAT', 106.690, 'Fiorino', 'Furgão pequeno')," +
+                "(null, 'Toyota', 290.690, 'Hilux', 'Caminhonete media')," +
+                "(null, 'FIAT', 127.890, 'Strada', 'Caminhonete pequena')";
 
         sqLiteDatabase.execSQL(sql1);
         Log.i("carro","Executado onCreate");
@@ -68,6 +68,18 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
         cursor.close();
         return listaCarro;
     }
+    public void salvarCarro(Carro carro){
+        String sql = "insert into carro values (null,'" +
+                carro.getFabricante()+ "', " +
+                carro.getPreco()+ "', " +
+                carro.getModelo()+"', " +
+                carro.getTipoVeiculo()+ ");";
+        Log.i("jogo","SQL salvarJogo: " + sql);
+
+        getWritableDatabase().execSQL(sql);
+
+    }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

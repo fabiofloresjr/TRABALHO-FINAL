@@ -22,13 +22,19 @@ public class CompradorActivity extends AppCompatActivity {
         StringBuilder mensagem = new StringBuilder();
         for(int i=0; i < listaCarro.size(); i++){
             Carro carro = listaCarro.get(i);
+            mensagem.append("Fabricante: ");
             mensagem.append(carro.getFabricante());
+            mensagem.append(" | ");
+            mensagem.append("Modelo: ");
             mensagem.append(carro.getModelo());
+            mensagem.append(" | ");
+            mensagem.append("Tipo do Veículo: ");
             mensagem.append(carro.getTipoVeiculo());
+            mensagem.append(" | ");
             mensagem.append("Custo: R$");
             mensagem.append(carro.getPreco());
             mensagem.append("\n");
-            mensagem.append("---------------------------------");
+            mensagem.append("------------------------------------------------------------------------------------------------------------");
             mensagem.append("\n");
 
         }

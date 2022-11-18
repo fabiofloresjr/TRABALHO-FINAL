@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".VendedorActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Qual a fabricante do seu carro?" />
+
+        <EditText
+            android:id="@+id/editTextFabricante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fabricante:"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Qual o valor do seu carro?" />
+
+        <EditText
+            android:id="@+id/editTextPreco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Valor:"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:text="Qual o modelo do seu carro?" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
