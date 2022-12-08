@@ -69,6 +69,13 @@
             android:hint="Carro:"
             android:inputType="textPersonName" />
 
+        <Button
+            android:id="@+id/editTextInserir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="salvarCarro"
+            android:text="Inserir" />
+
         <TextView
             android:id="@+id/textViewListagemCarros1"
             android:layout_width="match_parent"

@@ -17,10 +17,10 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
     private static final String NOME_BANCO = "carro";
     private static int VERSAO = 3;
 
-    public BancoDeDadosActivity(Context context){
-        super(context,NOME_BANCO,null,VERSAO);
+    public BancoDeDadosActivity(Context context) {
+        super(context, NOME_BANCO, null, VERSAO);
         String name = getDatabaseName();
-        Log.i("carros",name);
+        Log.i("carros", name);
 
         getWritableDatabase();
     }
@@ -28,7 +28,7 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-        Log.i("carros","Sendo executado onCreate");
+        Log.i("carros", "Sendo executado onCreate");
 
         String sql = "CREATE TABLE carro (" +
                 "id INTEGER PRIMARY KEY," +
@@ -48,15 +48,30 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
                 "(null, 'FIAT', 127.890, 'Strada', 'Caminhonete pequena')";
 
         sqLiteDatabase.execSQL(sql1);
-        Log.i("carro","Executado onCreate");
+        Log.i("carro", "Executado onCreate");
+
+//        String sql2 = "CREATE TABLE compras (" +
+//                "id INTEGER PRIMARY KEY," +
+//                "fabricante TEXT NOT NULL," +
+//                "preco REAL NOT NULL," +
+//                "modelo TEXT NOT NULL," +
+//                "tipoVeiculo TEXT NOT NULL)";
+//
+//        sqLiteDatabase.execSQL(sql2);
     }
-    public List<Carro> buscaTodosCarros(){
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+
+    public List<Carro> buscaTodosCarros() {
         List<Carro> listaCarro = new ArrayList<>();
         String sql = "select fabricante, preco, modelo,tipoVeiculo from carro";
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.rawQuery(sql,null);
+        Cursor cursor = db.rawQuery(sql, null);
         cursor.moveToFirst();
-        for(int i=0; i < cursor.getCount(); i++){
+        for (int i = 0; i < cursor.getCount(); i++) {
             Carro carro = new Carro();
             carro.setFabricante(cursor.getString(0));
             carro.setPreco(cursor.getFloat(1));
@@ -68,21 +83,17 @@ public class BancoDeDadosActivity extends SQLiteOpenHelper {
         cursor.close();
         return listaCarro;
     }
-    public void salvarCarro(Carro carro){
-        String sql = "insert into carro values (null,'" +
-                carro.getFabricante()+ "', " +
-                carro.getPreco()+ "', " +
-                carro.getModelo()+"', " +
-                carro.getTipoVeiculo()+ ");";
-        Log.i("jogo","SQL salvarJogo: " + sql);
+
+    public void salvarCarro(Carro carro) {
+        String sql = "insert into carro values (null, '" +
+                carro.getFabricante() + "', " +
+                carro.getPreco() + ", '" +
+                carro.getModelo() + "', '" +
+                carro.getTipoVeiculo() + "');";
+        Log.i("carro", "SQL salvarCarro: " + sql);
 
         getWritableDatabase().execSQL(sql);
 
     }
 
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        Log.i("carro","Executado onUpgrade");
-    }
 }

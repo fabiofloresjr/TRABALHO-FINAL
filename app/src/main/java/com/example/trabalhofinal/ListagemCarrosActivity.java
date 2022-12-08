@@ -2,21 +2,17 @@ package com.example.trabalhofinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class CompradorActivity extends AppCompatActivity {
+public class ListagemCarrosActivity extends AppCompatActivity {
 
-    BancoDeDadosActivity bancoDadosJogo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        bancoDadosJogo = new BancoDeDadosActivity(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comprador);
+        setContentView(R.layout.activity_listagem_carros);
 
         List<Carro> listaCarro = (List<Carro>) getIntent().
                 getSerializableExtra("lista");
@@ -46,15 +42,5 @@ public class CompradorActivity extends AppCompatActivity {
 
         }
         textView.setText(mensagem.toString());
-
     }
-
-
-//    public void addCompras(View view) {
-//        Intent intent = new Intent(this, ListaComprasActivity.class);
-//        startActivity(intent);
-//        bancoDadosJogo.salvarCarro();
-//
-//    }
-
 }

@@ -16,6 +16,28 @@
         <TextView
             android:id="@+id/textViewListagemCarros"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="451dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deseja comprar carro de que id?" />
+
+        <EditText
+            android:id="@+id/editTextIdCarro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Id:"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addCompras"
+            android:text="Enter" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
